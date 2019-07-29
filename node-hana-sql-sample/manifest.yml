@@ -1,0 +1,9 @@
+---
+applications:
+
+- name: node-hana
+  buildpack: nodejs_buildpack
+  memory: 128M
+  path: .
+  services:
+    - navin-test

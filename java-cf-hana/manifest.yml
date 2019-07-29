@@ -1,0 +1,9 @@
+---
+applications:
+
+- name: java-hana
+  buildpack: java_buildpack
+  memory: 1G
+  path: target/webapp.war
+  services:
+    - navin-test

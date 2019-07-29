@@ -1,0 +1,10 @@
+---
+applications:
+
+- name: py-hana
+  buildpack: python_buildpack
+  memory: 1G
+  path: .
+  command: python app.py
+  services:
+    - hackathon
