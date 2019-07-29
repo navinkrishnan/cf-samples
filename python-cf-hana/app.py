@@ -29,7 +29,7 @@ def hello():
         print('Unable to connect to database')
     po_list=[]
     cursor = conn.cursor()
-    cursor.execute("select * from \"A2F008990B284A638D1DCEAB5D55455B\".\"TEST\";", {})
+    cursor.execute("select * from \"SCHEMA\".\"TEST\";", {})
     records= cursor.fetchall()
 
     cursor.close()

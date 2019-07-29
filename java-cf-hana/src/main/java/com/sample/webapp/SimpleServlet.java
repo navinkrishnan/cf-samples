@@ -34,9 +34,9 @@ public class SimpleServlet extends HttpServlet {
        ResultSet rs = null;
        try {
            Class.forName("com.sap.db.jdbc.Driver");
-           con = DriverManager.getConnection("jdbc:sap://10.253.93.93:30041/?currentschema=A2F008990B284A638D1DCEAB5D55455B", "SBSS_70127013417422373007052407023260060293338678417465218094097250637", "Ep08rO6ladrwsASHzyKpppKhaELrZiiap2cCmFA8GV1kaQq9MuKF87udbAuEQ9s1xly6R40g-eo60f-5xyZ_qdc07wHNxVrqqJPrA585x4-0CWvmIeBd7s1OxFtMYi_E");
+           con = DriverManager.getConnection("CONNECTION_URL", "USER", "PASSWORD");
            stmt = con.createStatement();
-           rs = stmt.executeQuery("SELECT * FROM \"A2F008990B284A638D1DCEAB5D55455B\".\"TEST\";");
+           rs = stmt.executeQuery("SELECT * FROM \"SCHEMA\".\"TEST\";");
            // displaying records
            while (rs.next()) {
                result += rs.getObject(1).toString();
